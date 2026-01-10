@@ -1,3 +1,5 @@
+//fardin_000
+// https://codeforces.com/problemset/problem/2059/A
 #include <bits/stdc++.h>
 using namespace std;
 #define max(a, b) (a < b ? b : a)
@@ -16,18 +18,31 @@ typedef pair<int, int> pi;
 #define POB pop_back
 #define MP make_pair
 
-
 int main(){
     ios::sync_with_stdio(0);
     cin.tie(0);
     int tt; cin >> tt;
     while(tt--) {
         int n; cin >> n;
-        int arr[n],arr1[n];
-        ffor(i,n) cin >> arr[i];
-        ffor(i,n) cin >> arr[i];
+        vi a(n), b(n);
         
-
+        ffor(i,n) cin >> a[i];
+        ffor(i,n) cin >> b[i];
+        
+        set<int> sa(a.begin(), a.end());
+        set<int> sb(b.begin(), b.end());
+        
+        int dis_a = sa.size();
+        int dis_b = sb.size();
+    
+        if ((dis_a == 1 && dis_b == 1) || 
+        (dis_a == 1 && dis_b == 2) || 
+        (dis_b == 1 && dis_a == 2)) {
+            cout << "NO" << endl;
+        } 
+        else {
+            cout << "YES" << endl;
+        }
     }
     return 0;
 }
