@@ -17,17 +17,23 @@ typedef pair<int, int> pi;
 #define MP make_pair
 
 void solve(){
-  int n; cin >> n;
-  string s; cin >> s;
-  reverse(s.begin(),s.end());
-  ll s1 = stoll(s);
-  cout << (n+s1) << endl;
-  
+  string main = "codeforces";
+  char c; cin  >> c;
+  auto it = find(main.begin(),main.end(),c);
+  if(it != main.end()){
+    cout << "YES" << endl;
+  }
+  else{
+    cout << "NO" << endl;
+  }
 }
 
 int main(){
     ios::sync_with_stdio(0);
     cin.tie(0);
-    solve();
+    int tt; cin >> tt;
+    while(tt--) {
+        solve();
+    }
     return 0;
 }

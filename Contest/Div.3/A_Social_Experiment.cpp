@@ -16,18 +16,30 @@ typedef pair<int, int> pi;
 #define POB pop_back
 #define MP make_pair
 
-void solve(){
-  int n; cin >> n;
-  string s; cin >> s;
-  reverse(s.begin(),s.end());
-  ll s1 = stoll(s);
-  cout << (n+s1) << endl;
-  
+void solve(int n) {
+    if (n == 2) {
+        cout << 2 << endl;
+        return;
+    }
+    if (n == 3) {
+        cout << 3 << endl;
+        return;
+    }
+    if (n % 2 == 0) {
+        cout << 0 << endl;
+    } 
+    else {
+        cout << 1 << endl;
+    }
 }
 
-int main(){
+int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
-    solve();
+    int tt; cin >> tt;
+    while (tt--) {
+        int n; cin >> n;
+        solve(n);
+    }
     return 0;
 }
